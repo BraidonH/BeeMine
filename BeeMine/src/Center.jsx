@@ -13,8 +13,10 @@ import Button from  '@mui/material/Button';
     
 
     const setPost = () => {
-       setInput(arr => [...arr, inputRef.current.value]);
-       console.log(input)
+        //checks for empty value from poster
+       if(inputRef.current.value) {
+        setInput(arr => [...arr, inputRef.current.value]);
+       }
     }
 
   return (
