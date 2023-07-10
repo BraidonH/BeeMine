@@ -10,7 +10,6 @@ body {
 }
 
 #App {
-  margin-top: 6rem;
   background-image: url('./assets/SL-051919-20420-09.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -22,27 +21,11 @@ body {
   color: rgb(184, 162, 41);
 }
 
-.fixed {
-  overflow: hidden;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%;
+.headerContainer {
+  position: sticky; 
+  top: 10px;
 }
 
-.fixedNav {
-  
-  overflow: hidden;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  left: 84vw;
-}
-
-.fixedHam {
-  overflow: hidden;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  left: 96vw;
-}
 
 .swarm {
   animation: buzz 1.3s ease-in-out;
@@ -62,6 +45,7 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
+ 
 }
 
 
@@ -152,6 +136,13 @@ li:hover {
 .feedContainer {
   display: flex;
   gap: 1rem;
+}
+
+.person {
+  background-color: rgba(238, 238, 222, 0.489);
+  padding: .2rem;
+  position: relative;
+  border-radius: 100px;
 }
 
 

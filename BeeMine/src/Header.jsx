@@ -12,17 +12,17 @@ import { useState } from 'react';
 export default function Header() {
     const [display, setDisplay] = useState(false)
   return (
-    <div className='header'>
+    <div className='headerContainer'>   
+      <div className='header'>
         <div className="fixed">
         <div>        
             <h1 className="title">Bee<sup><img class="swarm" src={swarm} width="50px"/></sup>Mine</h1>
         </div>
         </div>
         {/* <input className='search' placeholder='search'></input> */}
-        <div>
+        <div className='fixedNav'>
             {display ?
-            <div>
-            <ul className='fixedNav'>
+            <ul>
                 <nav>
                 <li><img src={profile} alt="profile" height="25px"/></li>
                 <li><img src={honeycomb} alt="profile" height="25px"/></li>
@@ -31,13 +31,14 @@ export default function Header() {
                 <sup className="hamburger"><img src={exit} height="18px" onClick={() => setDisplay(!display)}></img></sup>
                 </nav>
             </ul> 
-                </div>
                 : 
                 <div className='fixedHam'>
                 <img className="hamburger" onClick={() => setDisplay(!display)} src={menu} height="40px"></img>
                 </div>
                 }
+        </div>
+      </div>
     </div>
-    </div>
+ 
   )
 }
